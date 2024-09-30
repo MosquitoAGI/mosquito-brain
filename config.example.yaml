@@ -1,0 +1,38 @@
+# config.example.yaml — copy to config.yaml and edit.
+camera:
+  index: 0
+  width: 320
+  height: 240
+  fps: 30
+
+vision:
+  # Encoder input size. Smaller is faster and noisier.
+  width: 160
+  height: 120
+  gain: 6.0            # scale factor for the left/right motion readings
+  looming_gain: 1.5    # scale factor for the escape-pool potential
+  blur: 3
+
+brain:
+  backend: mock          # mock | connectome
+  leak_ms: 120           # exponential leak time constant
+  escape_threshold: 0.72   # approach cue at which the reflex fires
+
+motor:
+  max_command: 60        # absolute cap on the command sent to the robot
+  dead_zone: 4           # below this the command is clamped to zero
+  smoothing: 0.35        # 0 = raw, closer to 1 = slower
+  invert_left: false
+  invert_right: false
+  command_timeout_ms: 500
+
+network:
+  robot_host: 192.168.4.1
+  robot_port: 9000
+  bind_port: 9001
+  telemetry_timeout_ms: 400
+
+log:
+  dir: runs
+  jsonl: true
+  every_n_frames: 5
