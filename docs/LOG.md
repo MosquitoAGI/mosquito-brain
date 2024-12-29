@@ -11,3 +11,4 @@ have no line, which is most weeks.
 - 2024-11-25 — wrote the malformed-packet cases first this time. better day than last week.
 - 2024-12-07 — read three other optical-flow encoders tonight; all of them blur more than mine and none of them say why. keeping mine.
 - 2024-12-18 — the screenshot folder for this project is now 400 images. future me will thank present me, or not.
+- 2024-12-29 — spent an evening tuning the synthetic scene instead of the encoder; the scene was the bug all along.
