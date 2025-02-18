@@ -14,3 +14,4 @@ have no line, which is most weeks.
 - 2024-12-29 — spent an evening tuning the synthetic scene instead of the encoder; the scene was the bug all along.
 - 2025-01-10 — the dead-zone test failed by one hundredth of a unit; the test was wrong, not the code.
 - 2025-01-20 — quiet week: no code, just reading the protocol doc until it made sense. it needed two fixes.
+- 2025-02-18 — measured the tick budget honestly today: encoder dominates, backend is cheap, the decoder is noise. optimise accordingly.
