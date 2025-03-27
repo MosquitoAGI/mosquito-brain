@@ -17,3 +17,4 @@ have no line, which is most weeks.
 - 2025-02-18 — measured the tick budget honestly today: encoder dominates, backend is cheap, the decoder is noise. optimise accordingly.
 - 2025-03-02 — renamed three variables in the decoder. the diff is ugly and the code is clearer.
 - 2025-03-15 — cut 0.1.0. it runs on my desk; that is the whole acceptance test.
+- 2025-03-27 — added an assert that fired within ten minutes. best kind of test.
