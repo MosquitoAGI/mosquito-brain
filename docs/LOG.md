@@ -19,3 +19,4 @@ have no line, which is most weeks.
 - 2025-03-15 — cut 0.1.0. it runs on my desk; that is the whole acceptance test.
 - 2025-03-27 — added an assert that fired within ten minutes. best kind of test.
 - 2025-05-08 — started a ledger of every packet the robot refused. two lines so far, both my fault.
+- 2025-05-22 — thought about failure modes on the walk home: cable, process, power. each needs its own stop. wrote it down.
