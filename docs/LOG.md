@@ -20,3 +20,4 @@ have no line, which is most weeks.
 - 2025-03-27 — added an assert that fired within ten minutes. best kind of test.
 - 2025-05-08 — started a ledger of every packet the robot refused. two lines so far, both my fault.
 - 2025-05-22 — thought about failure modes on the walk home: cable, process, power. each needs its own stop. wrote it down.
+- 2025-06-05 — hunted for a fixture for the encoder tests; ended up generating frames from a formula instead. faster and reproducible.
