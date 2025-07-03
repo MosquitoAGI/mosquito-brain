@@ -22,3 +22,4 @@ have no line, which is most weeks.
 - 2025-05-22 — thought about failure modes on the walk home: cable, process, power. each needs its own stop. wrote it down.
 - 2025-06-05 — hunted for a fixture for the encoder tests; ended up generating frames from a formula instead. faster and reproducible.
 - 2025-06-19 — the board idles at 11 mA with the radio up. fine for the bench, noted for the battery build.
+- 2025-07-03 — spike counts drift when the camera exposure changes. noted in the validation notes; the gain is not the fix.
