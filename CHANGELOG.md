@@ -2,6 +2,13 @@
 
 All notable changes to this project are recorded here.
 
+## [0.2.0]
+
+- Added the UDP transport and the stop-on-silent-telemetry rule.
+- Added `SequenceGate`; duplicate and out-of-order telemetry is now dropped and
+  counted instead of accepted.
+- Added the JSONL journal and `--no-journal`.
+
 ## [0.1.0]
 
 - First working bridge: encoder, 8-group mock backend, decoder, protocol, CLI.
