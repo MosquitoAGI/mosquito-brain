@@ -25,3 +25,4 @@ have no line, which is most weeks.
 - 2025-07-03 — spike counts drift when the camera exposure changes. noted in the validation notes; the gain is not the fix.
 - 2025-07-17 — week of small diffs: naming, comments, one constant. nothing to see, everything to keep.
 - 2025-08-12 — the watchdog question: stop, or keep the last command? stop. always stop. no debate after today.
+- 2025-08-13 — telemetry at 30 Hz is fine; at 120 Hz the laptop fans spin up. 30 it is.
