@@ -27,3 +27,4 @@ have no line, which is most weeks.
 - 2025-08-12 — the watchdog question: stop, or keep the last command? stop. always stop. no debate after today.
 - 2025-08-13 — telemetry at 30 Hz is fine; at 120 Hz the laptop fans spin up. 30 it is.
 - 2025-09-02 — the harness moved to the drawer and the stand came out. cable management is a feature.
+- 2025-09-15 — first day with the board on the desk: nothing flashed, but the pin map is agreed and the motor hooks are honest TODO stubs.
