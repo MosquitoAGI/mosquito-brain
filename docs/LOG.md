@@ -28,3 +28,4 @@ have no line, which is most weeks.
 - 2025-08-13 — telemetry at 30 Hz is fine; at 120 Hz the laptop fans spin up. 30 it is.
 - 2025-09-02 — the harness moved to the drawer and the stand came out. cable management is a feature.
 - 2025-09-15 — first day with the board on the desk: nothing flashed, but the pin map is agreed and the motor hooks are honest TODO stubs.
+- 2025-09-22 — read the spikes for an hour. the pools are quieter than expected on real encoder numbers. suspicious; noted for the validation pass.
