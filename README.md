@@ -5,7 +5,7 @@
 **Camera to robot, with a small spiking backend in the middle.**
 
 ![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-79cce8?style=flat-square)
-![Tests](https://img.shields.io/badge/tests-57_passing-38c172?style=flat-square)
+![Tests](https://img.shields.io/badge/tests-63_passing-38c172?style=flat-square)
 [![License: MIT](https://img.shields.io/badge/License-MIT-60dfb3?style=flat-square)](LICENSE)
 
 </div>
@@ -52,7 +52,7 @@ it would send.
 
 ```text
 src/fruitfly_brain/        CLI, config, encoder, decoder, protocol
-tests/                     57 checks
+tests/                     63 checks
 ```
 
 ## License

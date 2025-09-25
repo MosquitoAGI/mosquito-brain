@@ -2,6 +2,13 @@
 
 All notable changes to this project are recorded here.
 
+## [0.3.0]
+
+- Added the `connectome` backend: 26 hand-wired neurons, three feed-forward
+  layers, cross-inhibition between the motor pools.
+- Motor drives are now rates normalised per pool instead of raw spike counts.
+- Added `--brain` to the CLI.
+
 ## [0.2.0]
 
 - Added the UDP transport and the stop-on-silent-telemetry rule.
