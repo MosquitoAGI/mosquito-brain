@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-label="FruitFlyBrain Robot Bridge">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="55%" stop-color="#111c2e"/>
+      <stop offset="100%" stop-color="#0a1a16"/>
+    </linearGradient>
+    <linearGradient id="wire" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#79cce8" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#79cce8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#60dfb3" stop-opacity="0.15"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#60dfb3" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#60dfb3" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="340" fill="url(#bg)"/>
+  <circle cx="985" cy="120" r="180" fill="url(#glow)"/>
+
+  <g stroke="#2a3a52" stroke-width="1" opacity="0.55">
+    <path d="M0 250 H1200"/>
+    <path d="M0 285 H1200"/>
+    <path d="M0 315 H1200"/>
+  </g>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#c9d1d9">
+    <text x="70" y="96" font-size="20" fill="#79cce8" letter-spacing="4">FRUITFLY</text>
+    <text x="70" y="156" font-size="58" font-weight="700" letter-spacing="1">ROBOT BRIDGE</text>
+    <text x="70" y="196" font-size="19" fill="#8b98a8">camera &#8594; encoder &#8594; spiking backend &#8594; decoder &#8594; udp &#8594; robot</text>
+  </g>
+
+  <g transform="translate(70, 234)">
+    <rect x="0" y="0" width="180" height="46" rx="8" fill="#16233a" stroke="#2f4a6b" stroke-width="1"/>
+    <text x="16" y="29" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#79cce8">python 3.11+</text>
+    <rect x="196" y="0" width="150" height="46" rx="8" fill="#16233a"/>
+    <text x="212" y="29" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#60dfb3">68 tests</text>
+    <rect x="362" y="0" width="170" height="46" rx="8" fill="#16233a"/>
+    <text x="378" y="29" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#b4bfd0">bench prototype</text>
+    <rect x="548" y="0" width="150" height="46" rx="8" fill="#16233a"/>
+    <text x="564" y="29" font-family="ui-monospace, Menlo, monospace" font-size="15" fill="#f0a35e">udp / json</text>
+  </g>
+
+  <g transform="translate(760, 70)">
+    <rect x="0" y="0" width="360" height="180" rx="14" fill="#0f172a" stroke="#243b55"/>
+    <g stroke="url(#wire)" stroke-width="2" fill="none">
+      <path d="M24 40 C 120 40, 120 130, 336 130"/>
+      <path d="M24 90 H 336"/>
+      <path d="M24 140 C 120 140, 120 52, 336 52"/>
+    </g>
+    <g fill="#79cce8">
+      <circle cx="24" cy="40" r="4"/>
+      <circle cx="24" cy="90" r="4"/>
+      <circle cx="24" cy="140" r="4"/>
+    </g>
+    <g fill="#60dfb3">
+      <circle cx="336" cy="52" r="5"/>
+      <circle cx="336" cy="90" r="5"/>
+      <circle cx="336" cy="130" r="5"/>
+    </g>
+    <g font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#8b98a8">
+      <text x="34" y="176">26 neurons &#183; fixed weights &#183; no rng in the loop</text>
+    </g>
+  </g>
+</svg>
