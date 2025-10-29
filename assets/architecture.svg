@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="FruitFlyBrain signal flow">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#79cce8"/>
+    </marker>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#60dfb3"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="560" fill="#0d1117"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+    <text x="40" y="52" font-size="26" fill="#c9d1d9">FruitFlyBrain signal flow</text>
+    <text x="40" y="80" font-size="14" fill="#8b98a8">one tick = ingest &#8594; encode &#8594; step &#8594; shape &#8594; send</text>
+
+    <g>
+      <rect x="40" y="130" width="200" height="86" rx="10" fill="#16233a" stroke="#2c4a6b"/>
+      <text x="60" y="165" font-size="16" fill="#79cce8">frame source</text>
+      <text x="60" y="190" font-size="13" fill="#8b98a8">mock / webcam / video</text>
+    </g>
+
+    <g>
+      <rect x="300" y="130" width="200" height="86" rx="10" fill="#16233a"/>
+      <text x="320" y="165" font-size="16" fill="#79cce8">Encoder</text>
+      <text x="320" y="190" font-size="13" fill="#8b98a8">flow halves, coverage</text>
+    </g>
+
+    <g>
+      <rect x="560" y="130" width="200" height="86" rx="10" fill="#16233a"/>
+      <text x="580" y="165" font-size="16" fill="#60dfb3">BrainBackend</text>
+      <text x="580" y="190" font-size="13" fill="#8b98a8">mock | connectome</text>
+    </g>
+
+    <g>
+      <rect x="560" y="300" width="200" height="86" rx="10" fill="#16233a"/>
+      <text x="580" y="335" font-size="16" fill="#60dfb3">MotorDecoder</text>
+      <text x="580" y="360" font-size="13" fill="#8b98a8">limits, smoothing</text>
+    </g>
+
+    <g>
+      <rect x="300" y="300" width="200" height="86" rx="10" fill="#16233a"/>
+      <text x="320" y="335" font-size="16" fill="#f0a35e">Transport</text>
+      <text x="320" y="360" font-size="13" fill="#8b98a8">udp / null</text>
+    </g>
+
+    <g>
+      <rect x="40" y="300" width="200" height="86" rx="10" fill="#1a2436"/>
+      <text x="60" y="335" font-size="16" fill="#c9d1d9">robot</text>
+      <text x="60" y="360" font-size="13" fill="#8b98a8">motors + imu</text>
+    </g>
+
+    <g>
+      <rect x="300" y="440" width="200" height="76" rx="10" fill="#16233a"/>
+      <text x="320" y="472" font-size="16" fill="#f0a35e">TelemetryState</text>
+      <text x="320" y="496" font-size="13" fill="#8b98a8">fresh? -> stop rule</text>
+    </g>
+
+    <g stroke="#79cce8" stroke-width="2" fill="none" marker-end="url(#arrow)">
+      <path d="M240 173 H 296"/>
+      <path d="M500 173 H 556"/>
+      <path d="M660 216 V 296"/>
+      <path d="M560 343 H 504"/>
+    </g>
+
+    <g stroke="#60dfb3" stroke-width="2" fill="none" marker-end="url(#arrow2)">
+      <path d="M240 343 H 296"/>
+      <path d="M240 343 C 200 343, 200 400, 300 460" stroke-dasharray="5 4"/>
+      <path d="M60 300 C 60 250, 100 216, 130 216"/>
+    </g>
+
+    <text x="640" y="266" font-size="12" fill="#8b98a8">BrainOutput</text>
+    <text x="250" y="266" font-size="12" fill="#8b98a8">SensoryFrame</text>
+    <text x="510" y="410" font-size="12" fill="#8b98a8">motor_command</text>
+    <text x="120" y="430" font-size="12" fill="#8b98a8">telemetry</text>
+    <text x="710" y="205" font-size="12" fill="#8b98a8">drive 0..1</text>
+  </g>
+</svg>
