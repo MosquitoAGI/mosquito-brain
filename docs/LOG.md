@@ -31,3 +31,4 @@ have no line, which is most weeks.
 - 2025-09-22 — read the spikes for an hour. the pools are quieter than expected on real encoder numbers. suspicious; noted for the validation pass.
 - 2025-10-06 — the loom reflex fired when a light switch was flicked. hilarious, not great; the cue needs to be about area, not brightness.
 - 2025-10-17 — read a month of my own build log tonight. the loom channel had a bug for six weeks and the log never mentioned it. the log is not a debugger.
+- 2025-11-08 — rendering the demo gif is slower than the pipeline it depicts. fine. it runs once a month.
