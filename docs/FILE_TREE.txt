@@ -1,0 +1,55 @@
+fruitfly-brain/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md
+│   │   └── feature_request.md
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   └── workflows/
+│       └── test.yml
+├── assets/
+│   ├── architecture.svg
+│   ├── banner.svg
+│   ├── mock-demo.gif
+│   └── mock-demo.png
+├── config.example.yaml
+├── docs/
+│   ├── ARCHITECTURE.md
+│   ├── FILE_TREE.txt
+│   ├── HARDWARE.md
+│   ├── PROTOCOL.md
+│   └── VALIDATION.md
+├── examples/
+│   ├── render_demo.py
+│   └── run_mock.py
+├── firmware/
+│   └── esp32_hbridge/
+│       ├── README.md
+│       └── esp32_hbridge.ino
+├── src/fruitfly_brain/
+│   ├── __init__.py
+│   ├── brain/
+│   │   ├── __init__.py
+│   │   ├── base.py
+│   │   ├── connectome.py
+│   │   └── mock.py
+│   ├── config.py
+│   ├── controller.py
+│   ├── decoder.py
+│   ├── journal.py
+│   ├── main.py
+│   ├── protocol.py
+│   ├── telemetry.py
+│   └── vision.py
+├── tests/
+│   ├── test_brain.py
+│   ├── test_cli.py
+│   ├── test_config.py
+│   ├── test_controller.py
+│   ├── test_decoder.py
+│   ├── test_protocol.py
+│   └── test_vision.py
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── README.md
+└── pyproject.toml
