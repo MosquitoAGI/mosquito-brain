@@ -33,3 +33,4 @@ have no line, which is most weeks.
 - 2025-10-17 — read a month of my own build log tonight. the loom channel had a bug for six weeks and the log never mentioned it. the log is not a debugger.
 - 2025-11-08 — rendering the demo gif is slower than the pipeline it depicts. fine. it runs once a month.
 - 2025-11-28 — back after two weeks away; the tests still pass and the readme still lies in one place. fixed the readme.
+- 2025-12-31 — ruff in ci caught a shadowed name that two weeks of reading had not. worth the workflow file.
