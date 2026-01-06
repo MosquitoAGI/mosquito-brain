@@ -121,13 +121,18 @@ class ConnectomeBrain(BrainBackend):
         self.steps += 1
 
         currents = np.zeros(N_NEURONS, dtype=np.float64)
+        # The encoder reports "units"; the network wants currents. ``input_gain``
+        # is the one number that connects those worlds, and it was measured, not
+        # chosen: at 1.0 the pools stay silent on real encoder output, at 1.5
+        # they track. See docs/VALIDATION.md section 4.
+        gain = float(self.cfg.input_gain)
         drive = np.clip(
             np.array(
                 [
-                    sensory.left,
-                    sensory.right,
-                    sensory.expansion,
-                    (sensory.luminance - 0.5),
+                    sensory.left * gain,
+                    sensory.right * gain,
+                    sensory.expansion * gain,
+                    (sensory.luminance - 0.5) * gain,
                 ],
                 dtype=np.float64,
             ),

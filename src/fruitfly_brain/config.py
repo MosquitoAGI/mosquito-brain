@@ -56,6 +56,7 @@ class BrainConfig:
     backend: str = "mock"
     leak_ms: float = 120.0
     escape_threshold: float = 0.72
+    input_gain: float = 1.5
     seed: int = 7
 
     def validate(self) -> None:
@@ -65,6 +66,8 @@ class BrainConfig:
             raise ConfigError("brain.leak_ms must be positive")
         if not 0.0 < self.escape_threshold <= 1.0:
             raise ConfigError("brain.escape_threshold must be in (0, 1]")
+        if self.input_gain <= 0:
+            raise ConfigError("brain.input_gain must be positive")
 
 
 @dataclass
