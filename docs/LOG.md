@@ -34,3 +34,4 @@ have no line, which is most weeks.
 - 2025-11-08 — rendering the demo gif is slower than the pipeline it depicts. fine. it runs once a month.
 - 2025-11-28 — back after two weeks away; the tests still pass and the readme still lies in one place. fixed the readme.
 - 2025-12-31 — ruff in ci caught a shadowed name that two weeks of reading had not. worth the workflow file.
+- 2026-01-16 — the encoder says "units", the network wants currents. tried 1.0, 1.5, 2.0, 3.0: at 1.0 the pools stay silent, at 1.5 they track. 1.5 it is.
