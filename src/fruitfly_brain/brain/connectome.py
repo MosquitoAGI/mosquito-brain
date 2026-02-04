@@ -51,6 +51,17 @@ CONNECTIONS: tuple[tuple[int, int, float], ...] = (
     (12, 18, -0.4), (13, 16, -0.4),
 )
 
+# The readout window, in steps. A motor pool's drive is its firing rate over
+# this window, not over the whole run: an earlier version averaged over the
+# entire session, which meant a pool that fired once early on still reported a
+# drive seconds later and the command never came back down.
+READOUT_WINDOW = 15
+
+# Drive mapping: a pool's windowed firing rate below FLOOR reads as quiet,
+# above CEILING as fully driven, linear in between.
+DRIVE_FLOOR = 0.10
+DRIVE_CEILING = 0.60
+
 N_NEURONS = 26
 SENSORY = (0, 1, 2, 3)
 LEFT_POOL = (16, 17)
@@ -105,14 +116,22 @@ class ConnectomeBrain(BrainBackend):
         }
 
     def _rate(self, idx) -> float:
-        """Firing rate of a pool over the run so far."""
+        """Firing rate of a pool over the readout window."""
         if self.steps == 0:
             return 0.0
-        return float(self.spike_counts[list(idx)].sum() / (self.steps * len(idx)))
+        return float(self.history[:, list(idx)].mean())
 
     def _drive(self, rate: float) -> float:
-        """Firing rate to drive, scaled to the pool."""
-        return float(np.clip(rate * 3.0, 0.0, 1.0))
+        """Windowed rate to drive, with a floor and a ceiling.
+
+        Below ``DRIVE_FLOOR`` the pool is considered quiet; above
+        ``DRIVE_CEILING`` it is considered fully driven. Both numbers are in
+        firing-rate units per step and were set from the measurements in
+        docs/VALIDATION.md — a hard on/off threshold made the commands bang
+        between 0 and the cap with nothing in between.
+        """
+        span = DRIVE_CEILING - DRIVE_FLOOR
+        return float(np.clip((rate - DRIVE_FLOOR) / span, 0.0, 1.0))
 
     # ------------------------------------------------------------------- step
     def step(self, sensory: SensoryFrame, dt_ms: float) -> BrainOutput:
