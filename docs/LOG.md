@@ -37,3 +37,4 @@ have no line, which is most weeks.
 - 2026-01-16 — the encoder says "units", the network wants currents. tried 1.0, 1.5, 2.0, 3.0: at 1.0 the pools stay silent, at 1.5 they track. 1.5 it is.
 - 2026-01-25 — can the loop hold 30 fps on this laptop? yes, with room. on the pi? no. noted.
 - 2026-02-18 — one more sweep: the right-side numbers match the left side now. small victories.
+- 2026-03-04 — cleaned the bench; found a note that says 'check the loom sign'. checked it. it was already checked.
