@@ -28,7 +28,11 @@ class LIFPopulation:
         leak = -(self.v - self.v_rest)
         self.v[active] += (self.dt / self.tau_m) * (leak[active] + input_current[active])
         crossed = active & (self.v >= self.v_th)
+        # clamp the membrane before extending the refractory window;
+        # without this, a spike re-triggers on the following step when the
+        # drive current stays high.
         self.v[crossed] = self.v_reset
+        self.v[~active] = np.maximum(self.v[~active], self.v_reset)
         self.refract_timer[crossed] = self.refractory
         self.refract_timer = np.maximum(self.refract_timer - 1, 0)
         return crossed
