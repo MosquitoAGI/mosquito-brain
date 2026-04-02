@@ -39,3 +39,4 @@ have no line, which is most weeks.
 - 2026-02-18 — one more sweep: the right-side numbers match the left side now. small victories.
 - 2026-03-04 — cleaned the bench; found a note that says 'check the loom sign'. checked it. it was already checked.
 - 2026-03-19 — spent the evening NOT rewriting the controller. discipline.
+- 2026-04-02 — laid all three boards out for the family photo. then put two back in the drawer.
