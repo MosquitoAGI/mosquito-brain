@@ -40,3 +40,4 @@ have no line, which is most weeks.
 - 2026-03-04 — cleaned the bench; found a note that says 'check the loom sign'. checked it. it was already checked.
 - 2026-03-19 — spent the evening NOT rewriting the controller. discipline.
 - 2026-04-02 — laid all three boards out for the family photo. then put two back in the drawer.
+- 2026-04-30 — found the latch: two loom neurons exciting each other, so one approach kept the escape flag up for minutes. removed the couple; the pool has to be driven from outside now.
