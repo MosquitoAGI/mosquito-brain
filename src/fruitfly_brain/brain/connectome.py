@@ -43,8 +43,6 @@ CONNECTIONS: tuple[tuple[int, int, float], ...] = (
     (12, 16, 1.8), (14, 16, 0.8), (16, 17, 1.5),
     (13, 18, 1.8), (14, 18, 0.8), (18, 19, 1.5),
     (14, 20, 1.6), (14, 21, 1.6),
-    # loom pool: the two neurons hand excitation back and forth
-    (20, 21, 1.2), (21, 20, 1.2),
     # cross-inhibition: a strongly driven side suppresses the other
     (12, 18, -0.4), (13, 16, -0.4),
 )
