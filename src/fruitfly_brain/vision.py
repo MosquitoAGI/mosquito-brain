@@ -5,9 +5,14 @@ to recognise anything: it reports how much motion sits in the left and right
 half of the field, how fast the covered area of the field is growing, and the
 mean luminance. Everything downstream is built on those numbers.
 
-The looming channel is the radial mean of the flow field for now: it is the
-textbook approach cue and it is easy to read in the debug plot. If it turns out
-to be fragile on synthetic input, the covered-area growth is the fallback.
+A note on the looming channel: the first implementation used the radial
+component of the optical flow (mean of ``v . r/|r|``), which is the textbook
+way to detect approach. On synthetic blobs Farneback returns the *wrong sign*
+at a growth boundary — measured on a disc growing 12 px -> 26 px the radial
+mean reads negative, i.e. "receding" — and its divergence is numerically zero
+at this resolution. The frame-to-frame change in covered area has the correct
+sign on the same input, survives compression noise and costs nothing extra, so
+that is what this module reports. See ``docs/VALIDATION.md`` for the numbers.
 """
 
 from __future__ import annotations
@@ -59,10 +64,12 @@ class Encoder:
         self.cfg = cfg or VisionConfig()
         self.cfg.validate()
         self._prev: np.ndarray | None = None
+        self._prev_coverage = 0.0
         self.frames = 0
 
     def reset(self) -> None:
         self._prev = None
+        self._prev_coverage = 0.0
         self.frames = 0
 
     # ------------------------------------------------------------------ frames
@@ -117,6 +124,7 @@ class Encoder:
         coverage = self._coverage(gray)
         if self._prev is None:
             self._prev = gray
+            self._prev_coverage = coverage
             self.frames += 1
             return SensoryFrame(0.0, 0.0, 0.0, float(gray.mean()) / 255.0)
 
@@ -125,15 +133,10 @@ class Encoder:
         half = self.cfg.width // 2
         left = float(mag[:, :half].mean()) * self.cfg.gain
         right = float(mag[:, half:].mean()) * self.cfg.gain
-        yy, xx = np.mgrid[0 : gray.shape[0], 0 : gray.shape[1]]
-        cy = 0.5 * (gray.shape[0] - 1)
-        cx = 0.5 * (gray.shape[1] - 1)
-        rx, ry = xx - cx, yy - cy
-        norm = np.maximum(np.sqrt(rx * rx + ry * ry), 1e-6)
-        radial = (u * rx + v * ry) / norm
-        expansion = float(radial.mean()) * self.cfg.looming_gain
+        expansion = (coverage - self._prev_coverage) * self.cfg.looming_gain
 
         self._prev = gray
+        self._prev_coverage = coverage
         self.frames += 1
 
         clip = lambda x: float(np.clip(x, -8.0, 8.0))  # noqa: E731

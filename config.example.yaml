@@ -10,7 +10,7 @@ vision:
   width: 160
   height: 120
   gain: 6.0            # scale factor for the left/right motion readings
-  looming_gain: 1.5    # scale factor for the escape-pool potential
+  looming_gain: 12.0   # scale factor for the covered-area growth cue
   blur: 3
 
 brain:

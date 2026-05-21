@@ -39,7 +39,7 @@ class VisionConfig:
     width: int = 160
     height: int = 120
     gain: float = 6.0
-    looming_gain: float = 1.5
+    looming_gain: float = 12.0
     blur: int = 3
 
     def validate(self) -> None:
