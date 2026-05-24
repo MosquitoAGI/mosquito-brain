@@ -42,3 +42,4 @@ have no line, which is most weeks.
 - 2026-04-02 — laid all three boards out for the family photo. then put two back in the drawer.
 - 2026-04-30 — found the latch: two loom neurons exciting each other, so one approach kept the escape flag up for minutes. removed the couple; the pool has to be driven from outside now.
 - 2026-05-10 — writing docs for a repo nobody reads is still worth it: it is the only reader-proof spec I have.
+- 2026-05-24 — the radial mean of the flow reads negative on a blob that is growing. on synthetic input, Farneback puts the sign backwards at the boundary. covered-area growth has the right sign; switching.
