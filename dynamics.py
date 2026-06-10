@@ -1,5 +1,5 @@
-"""Shared dynamics parameters and defaults."""
-from dataclasses import dataclass
+"""Shared dynamics parameters, defaults and config loading."""
+from dataclasses import dataclass, fields
 
 
 @dataclass
@@ -18,3 +18,28 @@ class Dynamics:
         if self.tau_m <= 0:
             raise ValueError("tau_m must be positive")
         return self
+
+
+def load_params(path):
+    """Load a flat key: value file. Unknown keys are rejected."""
+    known = {f.name: f.type for f in fields(Dynamics)}
+    params = {}
+    with open(path) as fh:
+        for line in fh:
+            line = line.split("#", 1)[0].strip()
+            if not line:
+                continue
+            key, _, value = line.partition(":")
+            key = key.strip()
+            if key not in known:
+                raise ValueError("unknown parameter: %s" % key)
+            params[key] = float(value.strip())
+    return Dynamics(**params).validate()
+
+
+CONFIG_EXAMPLE = '''"""brain defaults for a run."""
+
+tau_m: 20.0
+refractory: 2
+gain: 8.0
+'''

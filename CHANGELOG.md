@@ -2,6 +2,11 @@
 
 All notable changes to this module. Dates in YYYY-MM-DD.
 
+## 0.3.0 — 2026-06-10
+- config file support (config.yaml)
+- synapse conduction delays up to 3 steps
+- fix: clamp membrane during refraction to stop re-triggering
+
 ## 0.2.0 — 2026-01-14
 - vectorized population updates (numpy) - 20k neurons step in milliseconds
 - reward-modulated plasticity traces, experimental
