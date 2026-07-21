@@ -55,7 +55,7 @@ class VisionConfig:
 class BrainConfig:
     backend: str = "mock"
     leak_ms: float = 120.0
-    escape_threshold: float = 0.72
+    escape_threshold: float = 0.45
     input_gain: float = 1.5
     seed: int = 7
 

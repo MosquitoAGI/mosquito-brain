@@ -16,7 +16,7 @@ vision:
 brain:
   backend: mock          # mock | connectome
   leak_ms: 120           # exponential leak time constant
-  escape_threshold: 0.72   # approach cue at which the reflex fires
+  escape_threshold: 0.45   # approach cue at which the reflex fires
   input_gain: 1.5        # scales encoder units into network currents
 
 motor:
