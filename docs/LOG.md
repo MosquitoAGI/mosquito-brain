@@ -43,3 +43,4 @@ have no line, which is most weeks.
 - 2026-04-30 — found the latch: two loom neurons exciting each other, so one approach kept the escape flag up for minutes. removed the couple; the pool has to be driven from outside now.
 - 2026-05-10 — writing docs for a repo nobody reads is still worth it: it is the only reader-proof spec I have.
 - 2026-05-24 — the radial mean of the flow reads negative on a blob that is growing. on synthetic input, Farneback puts the sign backwards at the boundary. covered-area growth has the right sign; switching.
+- 2026-08-18 — full bench day: one cycle of the synthetic camera, the escape window measured at 0.46–0.65, the latch gone, the commands come back down. numbers in docs/VALIDATION.md.
