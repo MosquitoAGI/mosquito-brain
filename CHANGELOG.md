@@ -1,6 +1,21 @@
 # Changelog
 
-All notable changes to this project are recorded here.
+All notable changes to this project are recorded here. Dates live in the
+build log (docs/LOG.md); versions live here.
+
+## [0.4.0]
+
+- Added `brain.input_gain` after the connectome backend measured silent on real
+  encoder output; the default (1.5) is the value chosen from those measurements.
+- Fixed the loom pool latching on: the escape flag stayed set for minutes after
+  a single approach because two of its neurons excited each other.
+- Added `brain.escape_threshold: 0.45`, measured against the synthetic approach.
+- The synthetic camera now sweeps exactly one full cycle every 150 frames.
+- Replaced the flow-based approach cue with covered-area growth after the
+  validation run showed the wrong sign on synthetic blobs.
+- Added `docs/VALIDATION.md` with the measurements.
+- Added per-reason commands (`track`, `escape`, `telemetry-timeout`) to the
+  journal.
 
 ## [0.3.0]
 
