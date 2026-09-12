@@ -2,6 +2,11 @@
 
 All notable changes to this module. Dates in YYYY-MM-DD.
 
+## 0.4.0 — 2026-09-12
+- rate coder: sensory vectors to input currents
+- step benchmark for 20k neurons
+- readme refresh: the loop, the model, the status
+
 ## 0.3.0 — 2026-06-10
 - config file support (config.yaml)
 - synapse conduction delays up to 3 steps
