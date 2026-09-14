@@ -45,3 +45,4 @@ have no line, which is most weeks.
 - 2026-05-24 — the radial mean of the flow reads negative on a blob that is growing. on synthetic input, Farneback puts the sign backwards at the boundary. covered-area growth has the right sign; switching.
 - 2026-08-18 — full bench day: one cycle of the synthetic camera, the escape window measured at 0.46–0.65, the latch gone, the commands come back down. numbers in docs/VALIDATION.md.
 - 2026-09-11 — quiet evening: readme rewritten for people who are not me, badge numbers re-counted, the demo gif re-rendered. this thing is as honest as I can make it.
+- 2026-09-14 — final pass: no stray files, no TODOs in the readme, tests green. going out.
